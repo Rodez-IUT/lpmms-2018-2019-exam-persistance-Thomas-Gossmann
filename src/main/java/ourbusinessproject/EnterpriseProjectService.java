@@ -18,14 +18,24 @@ public class EnterpriseProjectService {
     private EntityManager entityManager;
 
     public Project saveProjectForEnterprise(Project project, Enterprise enterprise) {
+        
         Enterprise entreprise = saveEnterprise(enterprise);
         project.setEnterprise(entreprise);
         Project projet = entityManager.merge(project);
+        
+        /*
+        if(entreprise != projet.getEnterprise()) {
+
+            entityManager.persist(projet);
+            entityManager.flush();
+            return projet;
+        } 
+        */
+        
         entreprise.addProject(projet);
         entityManager.persist(projet);
         entityManager.flush();
         return projet;
-        
     }
 
     public Enterprise saveEnterprise(Enterprise enterprise) {
