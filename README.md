@@ -51,7 +51,7 @@ Cette partie vise à évaluer votre capacité à faire un bon usage de la métho
 Vérifiez que l'ensemble des tests passent toujours. Si ce n'est pas le cas, modifiez votre code jusqu'à obtenir l'ensemble des tests au vert.
 2. La méthode *"EnterpriseProjectService.save(Project project)"* contient l'instruction *"entityManager.flush()"*. En étudiant la documentation de l'API JPA, décrivez quelle garantie apporte cette instruction pour le bon fonctionnement de la méthode.
 
-    _// A COMPLETER_
+    La méthode flush synchronise le contexte de persistance avec la base de données sous-jacente. Autrement dit, elle effectue les requetes SQL entre le contexte de persistance et la base de données associée.
 
 3. Décommentez le test _"testSaveDetachedProject"_ et modifiez le code principal de votre application pour faire en sorte que le test _"testSaveDetachedProject"_ passe. 
 Vérifiez que l'ensemble des tests passent toujours. Si ce n'est pas le cas, modifiez votre code jusqu'à obtenir l'ensemble des tests au vert.

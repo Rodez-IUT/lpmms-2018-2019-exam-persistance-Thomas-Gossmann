@@ -34,8 +34,6 @@ public class ZEvaluationLPMMSTest {
     @Autowired
     private Bootstrap bootstrap;
 
-    /* ****
-
     @Test
     public void testSaveDetachedEnterprise() {
 
@@ -82,6 +80,7 @@ public class ZEvaluationLPMMSTest {
 
     }
 
+    /*
     @Test
     public void testSaveOfProjectAfterEnterpriseSwitch() {
 
