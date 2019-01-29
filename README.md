@@ -75,6 +75,9 @@ Vérifiez que l'ensemble des tests passent toujours. Si ce n'est pas le cas, mod
 Vérifiez que l'ensemble des tests passent toujours. Si ce n'est pas le cas, modifiez votre code jusqu'à obtenir l'ensemble des tests au vert.
 4. Expliquez clairement, en français, ce qui se passe dans le test _"testOptimisticLockingOnConcurrentProjectModification"_.
 
-    _// A COMPLETER_
+    Le test prend comme base un projet existant dans le contexte de persistance courant.
+	Il simule une modification de ce projet de manière concurrente.
+	La première effectué par l'update de jdbc et la seconde par le code setTitle.
+	Le test attend une exception de type OptimisticLockException pour être valide, cette exception se lève lorsqu'une modification essaie d'être effectué en même temps qu'une autre (si le code est fonctionnel).
 
 

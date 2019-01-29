@@ -80,7 +80,6 @@ public class ZEvaluationLPMMSTest {
 
     }
 
-    /*
     @Test
     public void testSaveOfProjectAfterEnterpriseSwitch() {
 
@@ -116,7 +115,7 @@ public class ZEvaluationLPMMSTest {
 
         // and it is attached to project
         assertThat(enterprise2.getProjects(), hasItem(savedProject));
-    }*/
+    }
 
     @Test
     public void testProjectsAreVersionned() {
